@@ -10,6 +10,9 @@
   --brand-color7: rgba(231, 233, 252, 1);
   --brand-color8: rgba(142, 143, 153, 1);
   --brand-color9: rgba(49, 208, 170, 1);
+  --tr-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --tr-duration: 250ms;
+  --transition: var(--tr-function) var(--tr-duration);
 }
 
 body {
@@ -79,11 +82,23 @@ header {
 }
 
 .site-links a {
+  position: relative;
   text-decoration: none;
   font-size: 16px;
   font-weight: 500;
   line-height: 150%;
   color: var(--navyblue, #2e2f42);
+}
+
+.site-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--brand-color6);
+  border-radius: 2px;
 }
 
 .site-links {
@@ -98,6 +113,7 @@ header {
 .site-links a:focus {
   color: var(--brand-color6);
   text-decoration: underline;
+  transition: var(--transition);
 }
 
 .contact-links a {
@@ -120,6 +136,7 @@ header {
 .contact-links a:hover,
 .contact-links a:focus {
   color: var(--brand-color6);
+  transition: var(--transition);
 }
 
 .hero {
@@ -173,6 +190,7 @@ header {
   background-color: var(--brand-color6);
   border-radius: 4px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  transition: var(--transition);
 }
 
 .filter-buttons {
@@ -203,6 +221,7 @@ header {
   background-color: var(--brand-color6);
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
     0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
 }
 
 .titles {
@@ -322,7 +341,9 @@ header {
 .customers-list-element :focus {
   fill: var(--brand-color6);
   border: 1px solid var(--brand-color6);
+  transition: var(--transition);
 }
+
 .footer-bg {
   background-color: var(--brand-color1);
   padding-left: 0;
@@ -360,6 +381,7 @@ header {
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+  transition: var(--transition);
 }
 
 .cards figure {
@@ -390,6 +412,7 @@ header {
 .circle:hover,
 .circle:focus {
   background-color: var(--brand-color6);
+  transition: var(--transition);
 }
 
 .circle svg {
@@ -422,6 +445,7 @@ header {
 
 .footer-sm-list .circle:hover {
   background-color: var(--brand-color9);
+  transition: var(--transition);
 }
 
 .sm-title {
@@ -431,4 +455,29 @@ header {
   line-height: 150%;
   letter-spacing: 0.32px;
   padding-bottom: 16px;
+}
+
+.card-box {
+  position: relative;
+  width: 360px;
+  height: 421px;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  background-color: var(--brand-color2);
+  color: var(--brand-color4);
+  padding: 40px 32px 0 32px;
+
+  transform: translatey(100%);
+  transition: var(--transition);
+}
+
+.card-box:hover .overlay {
+  transform: translatey(0);
 }
