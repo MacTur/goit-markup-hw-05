@@ -20,7 +20,7 @@
             ><span>WEB</span><span class="logo-part-lightbg">STUDIO</span></a
           >
           <nav class="site-links">
-            <a href="./index.html">Studio</a>
+            <a class="site-link-current" href="./index.html">Studio</a>
             <a href="./portfolio.html">Portfolio</a>
             <a href="contacts">Contacts</a>
           </nav>
@@ -35,7 +35,16 @@
         <section class="main-title-bg">
           <div class="container hero">
           <h1 class="main-title">Effective Solutions for Your Business</h1>
-          <button class="order-button" type="button">Order Service</button>
+          <button class="order-button" type="button" data-modal-open>Order Service</button>
+          </div>
+          <div class="modal is-hidden" data-modal>
+            <div class="modal-body">
+              <button class="modal-close" data-modal-close>
+                <svg class="close-icon">
+                  <use href="./images/icons.svg#icon-close-button-icon"></use>
+                </svg>
+              </button>
+            </div>
           </div>
         </section>
 
