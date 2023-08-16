@@ -20,6 +20,10 @@ body {
   color: var(--brand-color1);
 }
 
+button {
+  border: none;
+}
+
 ul,
 h1,
 h2,
@@ -231,25 +235,23 @@ header {
   border-radius: 50%;
   background-color: var(--brand-color7);
   stroke-width: 1px;
+  border-color: ;
   stroke: rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
+  fill: var(--brand-color1);
 }
 
 .close-icon {
   height: 8px;
   width: 8px;
-  fill: var(--brand-color1);
-}
-
-.close-icon:hover {
-  fill: #fff;
 }
 
 .modal-close:hover,
 .modal-close:focus {
   background-color: var(--brand-color2);
+  fill: var(--brand-color5);
   transition: var(--transition);
 }
 
