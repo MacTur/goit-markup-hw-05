@@ -235,7 +235,6 @@ header {
   border-radius: 50%;
   background-color: var(--brand-color7);
   stroke-width: 1px;
-  border-color: ;
   stroke: rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
@@ -253,6 +252,11 @@ header {
   background-color: var(--brand-color2);
   fill: var(--brand-color5);
   transition: var(--transition);
+}
+
+.order-service-form {
+  display: flex;
+  flex-direction: column;
 }
 
 .filter-buttons {
@@ -423,6 +427,7 @@ header {
 
 .footer-wraper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
   background-color: var(--brand-color1);
 }
@@ -502,6 +507,7 @@ header {
 
 .footer-sm-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
 }
 
@@ -510,7 +516,8 @@ header {
   transition: var(--transition);
 }
 
-.sm-title {
+.sm-title,
+.footer-form-label {
   color: var(--brand-color4);
   font-size: 16px;
   font-weight: 500;
@@ -542,4 +549,58 @@ header {
 
 .cards li:hover .overlay {
   transform: translatey(0);
+}
+
+.footer-form {
+  display: flex;
+  max-width: 264px;
+}
+
+.form-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-top: 100px;
+  margin-left: 80px;
+}
+
+.footer-form-label input {
+  display: flex;
+  width: 264px;
+  height: 40px;
+  margin-top: 16px;
+  background-color: var(--brand-color1);
+  color: var(--brand-color4);
+  border-radius: 4px;
+  border: 1px solid var(--brand-color4);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.subscribe-button {
+  display: flex;
+  align-self: center;
+  color: var(--brand-color5);
+  background-color: var(--brand-color2);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
+  padding: 8px 24px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  letter-spacing: 0.64px;
+  border-width: 0px;
+  margin-top: 140px;
+  margin-left: 24px;
+}
+
+.subscribe-button:hover,
+.subscribe-button:focus {
+  background-color: var(--brand-color9);
+  transition: var(--transition);
+}
+
+.subscribe-button svg {
+  fill: var(--brand-color4);
+  margin-left: 16px;
 }
